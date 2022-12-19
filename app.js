@@ -63,7 +63,7 @@ function addCharacter() {
 			let hasName = false;
 
 			if ( charName && charName !== 'undefined' && charName !== '' ) {
-				// We have a name, so toggle hasName to true.
+				// We have a name, so toggle Name to true.
 				hasName = true;
 
 				// Remove the old input and button.

@@ -5,25 +5,44 @@
 	<title>Initiative Tracker</title>
 </head>
 <body>
-	<header>
-		<h1>Intitative Tracker</h1>
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <style type="text/css">
+      body { background: rgb(182, 208, 239) !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+     </style>
+     <script src="https://kit.fontawesome.com/bd721e5616.js" crossorigin="anonymous"></script>
+	
+	
+	 <header>
+		<h1><img src="https://media.tenor.com/gOCEHYul7PAAAAAi/dnd-dungeons-and-dragons.gif" alt="Roll Initiative" style="width:150px;height:150px;"></h1>
+		<style>
+			h1 {text-align: center;}
+			h2 {text-align: center;}
+			div {text-align: center;}
+		</style>
+	
 	</header>
+
 	<div class="battle-tracker">
 		<div class="initiative-order">
 			<ul id="initiative-list">
 			</ul>
 		</div>
-		<div class="characters">
-			<h2>Heroes</h2>
+		<div class="characters"> 
+			<h2> Add Heros <h2>
+				<h2><img src="https://i.gifer.com/UUjj.gif" alt = "Heroes" style="width:325px;height:150px;" ></h2>
 			<ul id="character-list">
 			</ul>
 			<button id="add-new-character">Add new</button>
 		</div>
-		<div class="monsters-npcs">
+		<div class="monsters-npcs"> 
 			<h2>Enemies and NPCs</h2>
+			<h2><img src="https://64.media.tumblr.com/b99a8e1d4b75ee85166e364cce341d67/tumblr_mn45s5Hn7X1rnvb0co1_500.gif" alt = "Heroes" style="width:325px;height:150px;" ></h2>
 			<ul id="monster-npc-list">
 			</ul>
 			<button id="add-new-npc">Add new</button>
+		
+		
 		</div>
 
 		<div class="start" id="save-fields">
@@ -31,6 +50,7 @@
 			<p class="description" id="save-all-fields-desc">Click the button to begin the encounter.</p>
 		</div>
 	</div>
+</div>
 </body>
 
 <script src="app.js"></script>
