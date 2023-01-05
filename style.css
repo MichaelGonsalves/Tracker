@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(3, 124, 158);
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: 'Zilla Slab', serif;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Zilla Slab', serif;
+  font-size: 3rem;
+  padding-bottom: 50px;
+}
+
+#heroesClip img {
+  justify-content: center;
+  text-align: center;
+  width: 325px;
+  height: 150px;
+  font-family: 'Zilla Slab', serif;
+  padding: 50px 0px 0px 20px;
+}
+/*
+.box {
+  justify-content: center;
+  border:6px solid burlywood; 
+  width: 612px;
+}*/
+
+#heroes h2 {
+  padding: 50px 0px 0px 20px;
+  border-style: 2px solid rgb(255, 255, 255);
+}
+
+.content {
+  text-align: center;
+  justify-content: center;    
+  }
+
+#add-new-character {
+  justify-content: center;
+  font-family: 'Zilla Slab', serif;
+  font-size: 1.5rem;
+}
+
+#enemiesClip img h2 {
+  text-align: center;
+  width: 325px;
+  height: 150px;
+  font-family: serif;
+  /*padding: 50px 0px 0px 20px;
+  width: 100%; 
+  border: 2px solid burlywood;*/
+}
+
+#add-new-npc{
+  justify-content: center;
+  font-family: 'Zilla Slab', serif;
+  font-size: 1.5rem;
+}
+
+#save-all-fields {
+  justify-content: center;
+  font-family: 'Zilla Slab', serif;
+  font-size: 1.5rem;
+}
+
+div {
+  text-align: center;
+}
+
+button {
+  padding: 8px;
+  margin: 20px 0px 0px 50px;
+  margin-bottom: 50px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background:rgb(0,208,250); /* Because site bg-color is set to "!important" these colors cannot change*/
+  color: white;
+}
+
+button:hover {
+  background: white;
+  color:rgb(0,208,250)
+}
+p{
+  font-size: 1.5rem;
+  text-align: center;
+}
