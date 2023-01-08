@@ -28,12 +28,36 @@ h1 {
   font-family: 'Zilla Slab', serif;
   padding: 50px 0px 0px 20px;
 }
-/*
-.box {
-  justify-content: center;
-  border:6px solid burlywood; 
-  width: 612px;
-}*/
+
+.char-list {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+   
+}
+
+
+.character-name {
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin: 15px;
+}
+.character-init-bonus {
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin: 15px;
+}
+.initiative-value {
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin: 15px;
+}
+.hp-input {
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin: 15px;
+    -webkit-text-fill-color: azure;
+}
+
 
 #heroes h2 {
   padding: 50px 0px 0px 20px;
@@ -56,10 +80,9 @@ h1 {
   width: 325px;
   height: 150px;
   font-family: serif;
-  /*padding: 50px 0px 0px 20px;
-  width: 100%; 
-  border: 2px solid burlywood;*/
+
 }
+
 
 #add-new-npc{
   justify-content: center;

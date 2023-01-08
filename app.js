@@ -44,7 +44,7 @@ function buildTmpChar() {
 	return tmpChar;
 }
 
-//Add a character line.
+//Add a character line. Character Name
 
 function addCharacter() {
 	const addChar = document.querySelectorAll( '[id^="add-tmp-char-"]' );
@@ -144,7 +144,7 @@ function buildName( thisItem, id, charName ) {
 	charSpan = document.createElement( 'span' );
 	charSpan.setAttribute( 'id', `addChar-${id}` );
 	charSpan.classList.add( 'character-name' );
-	charSpan.textContent = charName;
+	charSpan.textContent = charName ;
 	thisItem.appendChild( charSpan );
 }
 
@@ -162,7 +162,7 @@ function buildInitBonus( thisItem, id, dexVal ) {
 	thisItem.appendChild( dexSpan );
 }
 
-// Builds the initiative input and save button.
+// Builds the initiative input and save button. hp
  
 function buildInitInput( thisItem, id ) {
 	// Build the input.
@@ -231,14 +231,14 @@ function buildInitiative( initiative, id ) {
 function buildHp( thisItem, id ) {
 	// Add an input to track HP.
 	hpInput = document.createElement( 'input' );
-	hpInput.setAttribute( 'type', 'number' );
+	hpInput.setAttribute( 'type', 'text' );
 	hpInput.setAttribute( 'id', `hp-${id}` );
 	hpInput.setAttribute( 'placeholder', 'HP' );
 	hpInput.setAttribute( 'data-hp-max', 0 );
 	hpInput.setAttribute( 'data-hp-current', 0 );
 	hpInput.setAttribute( 'data-hp-last', 0 );
 	hpInput.classList.add( 'hp-input' );
-	thisItem.appendChild( hpInput );
+	thisItem.appendChild (hpInput);
 
 	// Now we need a button to add for entering/calculating HP.
 	hpButton = document.createElement( 'button' );
@@ -271,7 +271,7 @@ function addHp() {
 	let hpLast = hpMax;
 
 	// Set the max HP to the value that was input first.
-	hpInput.setAttribute( 'data-hp-max', hpMax );
+	hpInput.setAttribute( 'data-hp-max', hpMax);
 
 	// Set the current HP to the max value because we're initializing the fight.
 	hpInput.setAttribute( 'data-hp-current', hpCurrent );
@@ -464,6 +464,7 @@ function buildCharacterListByInit() {
 		// Build the list item for the character.
 		characterEl.textContent = `${character.name} (${character.init}) [${ character.type.toUpperCase()}]`;
 		characterEl.setAttribute( 'id', `character-${character.id}` );
+		characterEl.setAttribute( 'class', 'char-list')
 		characterEl.setAttribute( 'data-name', character.name );
 		characterEl.setAttribute( 'data-init', character.init );
 		characterEl.setAttribute( 'data-max-hp', character.maxHp );
@@ -515,57 +516,15 @@ function getId( el ) {
 
 // caluculte the Dex Modifer.
 function calculateModifier( score ) {
-	switch( score ) {
-		case 1:
-			return -5;
-		case 2:
-		case 3:
-			return -4;
-		case 4:
-		case 5:
-			return -3;
-		case 6:
-		case 7:
-			return -2;
-		case 8:
-		case 9:
-			return -1;
-		case 10:
-		case 11:
-			return 0;
-		case 12:
-		case 13:
-			return 1;
-		case 14:
-		case 15:
-			return 2;
-		case 16:
-		case 17:
-			return 3;
-		case 18:
-		case 19:
-			return 4;
-		case 20:
-		case 21:
-			return 5;
-		// At this point we get into epic levels that are less common.
-		case 22:
-		case 23:
-			return 6;
-		case 24:
-		case 25:
-			return 7;
-		case 26:
-		case 27:
-			return 8;
-		case 28:
-		case 29:
-			return 9;
-		case 30:
-			return 10;
-		default:
-			return 0;
-	}
+    const dexMod = {1: -5, 30: 10, "default": 0};
+    let count = -4;
+    for (let i = 2; i <= 29; i+=2) {
+        dexMod[i] = count
+        dexMod[i+1] = count
+        count++
+        };
+    console.log(dexMod);
+    return dexMod[score];
 }
 
 // Get the modifier with a leading + (or - for negative values).
