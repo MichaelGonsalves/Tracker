@@ -32,6 +32,7 @@ h1 {
 .char-list {
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
     box-shadow: 5px 5px 15px 5px #000000;
+    margin: 15px;
    
 }
 
@@ -40,6 +41,7 @@ h1 {
   -webkit-box-shadow: 5px 5px 15px 5px #000000; 
     box-shadow: 5px 5px 15px 5px #000000;
     margin: 15px;
+    
 }
 .character-init-bonus {
   -webkit-box-shadow: 5px 5px 15px 5px #000000; 
@@ -120,3 +122,4 @@ p{
   font-size: 1.5rem;
   text-align: center;
 }
+<audio src = "World's Most Epic Pirate Music Mix 1-Hour Mix.mp3" controls autoplay></audio>

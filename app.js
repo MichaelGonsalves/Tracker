@@ -6,7 +6,7 @@ const saveAll = document.getElementById( 'save-all-fields' );
 const initList = document.getElementById( 'initiative-list' );
 let charCount = 0;
 
-// TmpChar build
+// Making the Character build.
 function buildTmpChar() {
 	const tmpChar = document.createElement( 'li' );
 	const nameInput = document.createElement( 'input' );
@@ -19,7 +19,7 @@ function buildTmpChar() {
 	nameInput.classList.add( 'character-name');
 	tmpChar.appendChild(nameInput);
 
-	// Character Dexterity.
+	// Character Dex.
 	dexInput.setAttribute( 'id', `charDex-${charCount}` );
 	dexInput.setAttribute( 'placeholder', 'Dex' );
 	dexInput.setAttribute( 'type', 'number' );
@@ -32,7 +32,7 @@ function buildTmpChar() {
 	button.setAttribute( 'id',`add-tmp-char-${charCount}` );
 	button.textContent = 'Add'
 
-	// Add the character ID to the new character line.
+	// Add the character to the new character line.
 	tmpChar.setAttribute( 'id', `character-${charCount}` );
 
 	// Add the button to the temp character line.
@@ -148,7 +148,7 @@ function buildName( thisItem, id, charName ) {
 	thisItem.appendChild( charSpan );
 }
 
-//Save the Initiative Bonus to the page as a text element.
+//Save the Initiative Bonus.
  
 function buildInitBonus( thisItem, id, dexVal ) {
 	const initBonus = getModifier( dexVal );
@@ -162,14 +162,14 @@ function buildInitBonus( thisItem, id, dexVal ) {
 	thisItem.appendChild( dexSpan );
 }
 
-// Builds the initiative input and save button. hp
+// Builds the Input and Save button. 
  
 function buildInitInput( thisItem, id ) {
 	// Build the input.
 	initInput = document.createElement( 'input' );
 	initInput.setAttribute( 'type', 'number' );
-	initInput.setAttribute( 'min', '1' ); // The lowest possible initiative you could roll, e.g. 1 on 1d20.
-	initInput.setAttribute( 'max', '20' ); // The highest possible initiative you could roll, e.g. 20 on 1d20.
+	initInput.setAttribute( 'min', '1' ); 
+	initInput.setAttribute( 'max', '20' );
 	initInput.setAttribute( 'id', `charInit-${id}` );
 	initInput.setAttribute( 'placeholder', 'd20' );
 	initInput.classList.add( 'character-initiative' );
@@ -182,13 +182,11 @@ function buildInitInput( thisItem, id ) {
 	saveInit.classList.add( 'save-initiative' );
 	thisItem.appendChild( saveInit );
 
-	// Add an event listener to the save init button.
+	// Add the save init button.
 	saveInit.addEventListener( 'click', calculateAndSaveInitiative );
 }
 
-// Calculate the initiative for a character.
-
-// Pass the initiative along to the buildInitiative function which stores the value.
+// Initiative for a character.
 
 function calculateAndSaveInitiative() {
 	const id = getId( this );
@@ -226,7 +224,7 @@ function buildInitiative( initiative, id ) {
 	thisItem.appendChild( initDisplay );
 }
 
-//Builds an input for tracking HP.
+//Builds HP.
  
 function buildHp( thisItem, id ) {
 	// Add an input to track HP.
